@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/pages.css">
+        <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
 
@@ -45,92 +45,67 @@
 
         <section class="hero">
             <div class="hero-bg">
-                <h1>Player Lobby</h1>
+                <h1>Player Profile</h1>
                 
-                <p class="subhead">View information about existing players.</p>
+                <p class="subhead">This is your profile</p>
             </div>
             
         </section>
 
 
-        <!--THE OPTIONS --> 
+        <!--THE PROFILE --> 
 
+        <div class="profile-card">
 
-
-        <section class="more-info">
-            <div class="feature">
-                
-                <div class="content left-margin">
-                    <p class="title">View Players</p>
-                    <span id="container"></span>
-                    <br>
-      
-                <button class="button-27 pagebuttons" role="button" id="loadButton">View Players</button>
+            <div class="card-header">
+                <div class="pic">
+                    <img src="images/swordsman.png" alt="">
                 </div>
-                <img src="images/sword2.jpg" alt="Photo of a sword by Jonathan Kemper">
-                    
+                <div class="name">Abeth</div>
+                <div class="playerClass">Monk</div>
+                <div class="sm">
+                    <ul>
+                        <li>01</li>
+                        <li>02</li>
+                        <li>03</li>
+                    </ul>
+                </div>
+                <a href="#" class="openinv-btn">Open Inventory</a>
             </div>
+            <div class="card-footer">
+                <div class="numbers">
+                    <div class="item">
+                        <span>120</span>
+                        Posts
+                </div>
+                <div class="border"></div>
+                <div class="numbers">
+                    <div class="item">
+                        <span>127</span>
+                        Following
+                </div>
+                <div class="border"></div>
+                <div class="numbers">
+                    <div class="item">
+                        <span>120K</span>
+                        Followers
+                </div>
+
+                </div>
+            </div>
+            
+        </div>
+
         
-            <div class="feature flip">
-                <div class="content right-margin">
-                    <p class="title">Select Player</p>
-                    <span id="playerContainer"></span>
-                    <br>
-                 <input id = "selectInput" type="text" onfocus="this.value=''">
-                 <br>
-         
-                 <button class="button-27 pagebuttonsflip" role="button" id = selectPlayer>Select Player</button>
-                                 
-                </div>
-                <img src="images/sword.jpg" alt="Photo of a sword by Jonathan Kemper">
-                    
-            </div>
-
-            <div class="feature">
-                <div class="content addentry">
-                    <p class="title">Add Another Player</p>
-                    <div class="input-fields">    
-                        <P>Player name:</P>
-                        <input id = "nameInput" type="text" onfocus="this.value=''">
-
-                        <p>Player class:</p>
-                        <input id = "classInput" type="text" onfocus="this.value=''">
-
-                        <p>Player's Armor Class:</p>
-                        <input id = "acInput" type="text" onfocus="this.value=''">
-
-                        <p>Player's Password:</p>
-                        
-                        <input id = "passwordInput" type="text" onfocus="this.value=''">
-                    </div>
-                </div>
-                
-                <!-- HTML for BUTTON!-->
-                <button class="button-27 pagebuttonsv2" role="button" id= "addPlayer">Add Player</button>
-
             
-            </div>
 
 
 
-            <div class="feature flip">
-                <div class="content">
-                    <p class="title">Remove a Player</p>
-                    
-                    <br>
-                 <input id = "removeInput" type="text" onfocus="this.value=''">
-                 <br>
-         
-                 <button class="button-27 pagebuttons" role="button"class="button-27 pagebuttons" role="button" id = removePlayer>Remove Player</button>
-                                 
-                </div>
-                <img src="images/sword.jpg" alt="Photo of a sword by Jonathan Kemper">
-                    
-            </div>
-        </section>
+        
+        
 
     </div>
     
-    <script src="js/players.js"></script>
+    <script src="js/player.js"></script>
 </body>
 </html>
