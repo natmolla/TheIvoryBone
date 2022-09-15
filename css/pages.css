@@ -1,0 +1,505 @@
+.button-27 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+
+body {
+    margin: 1.5em;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .center {
+    margin-top: 2em;
+    text-align: center;
+    
+    }
+
+button.pagebuttons {
+    margin-top: 1em;
+    margin-bottom:1em;
+    margin-right:5em;
+    margin-left:7em;
+    max-height: 3em;
+    max-width: fit-content;
+}
+
+button.pagebuttonsv2 {
+    margin-top: 2em;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    width: 15em;
+   
+
+} 
+
+input#selectInput {
+    align-self: center;
+}
+  
+  a {
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  
+  .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(53, 53, 53, 0.55), rgba(7, 5, 32, 0.33)), url("../images/dragon.jpg");
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 20%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    -webkit-animation: introLoad 2s forwards;
+            animation: introLoad 2s forwards;
+    overflow: hidden;
+  }
+  
+  .logo {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  .logo span {
+    color: rgb(105, 99, 196);
+  }
+  
+  nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 8em;
+  }
+  nav ul a {
+    color: rgb(0, 0, 0);
+    padding: 0.75em 2em;
+    display: block;
+  }
+  nav ul a:hover {
+    background: rgba(105, 99, 196, 0.15);
+  }
+  nav .close {
+    color: black;
+    float: right;
+    margin: 2em;
+    width: 2.5em;
+    z-index: 999;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header svg {
+    color: black;
+    width: 2.3em;
+    margin-top: -0.6em;
+    cursor: pointer;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-top: 2em;
+    line-height: 3.3rem;
+  }
+  
+  .subhead {
+    font-size: 1.4rem;
+  }
+  
+  div.hero-img {
+    opacity: 95%;
+  }
+  
+  section.hero {
+    color: rgb(242, 241, 248);
+    height: 90vh;
+    -webkit-animation: moveDown 1s ease-in-out forwards;
+            animation: moveDown 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  section.hero div.hero-bg {
+    padding-top: 0.1em;
+  }
+  section.hero .down-arrow {
+    stroke: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -2em;
+    width: 1em;
+    animation: moveArrow 1s alternate-reverse infinite;
+  }
+  section.hero .down-arrow path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .more-info {
+    margin-top: 5em;
+  }
+  .more-info img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 15em;
+  }
+  .more-info .title {
+    
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  .more-info .desc {
+    line-height: 1.5rem;
+  }
+  
+  .open-nav {
+    transform: translateX(0%);
+  }
+  
+  @media only screen and (min-width: 680px) {
+
+    .center {
+        margin-top: 2em;
+        text-align: center;
+        
+        }
+
+    section.hero div.hero-bg {
+      margin: 0;
+    }
+    body {
+      margin: 1.5em 5em;
+      font-family: "Poppins", sans-serif;
+    }
+
+    button.pagebuttons {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        margin-left: 12.5em;
+
+    }
+
+    button.pagebuttonsv2 {
+        margin-top: 2em;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        width: 15em;
+
+    }
+  }
+
+  @media only screen and (min-width: 800) {
+
+    button.pagebuttons {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        margin-left: 100em;
+
+    }
+
+  }
+
+
+  @media only screen and (min-width: 920px) {
+
+    
+
+    div.content.addentry {
+        text-align: center;
+        width: 50%;
+        justify-self: center;
+        
+    }
+
+    button.pagebuttons {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        margin-left: 7.5em;
+
+    }
+
+    button.pagebuttonsv2 {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        width: 15em;
+
+    }
+
+      
+      
+    .more-info {
+        margin-top: 20em;
+    }
+
+    .center {
+        margin-top: 2em;
+        text-align: center;
+        
+        }
+
+    .logo {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+    }
+    .logo span {
+      color: rgb(105, 99, 196);
+    }
+    .header {
+      color: white;
+    }
+    .menu {
+      display: none;
+    }
+    nav {
+      transform: translateX(0);
+      position: unset;
+      display: block;
+      width: auto;
+      height: auto;
+      background: none;
+    }
+    nav svg.close {
+      display: none;
+    }
+    nav ul {
+      display: flex;
+      margin: 0;
+    }
+    nav ul a {
+      color: rgb(255, 255, 255);
+      padding: 0.5em 1.5em;
+      font-size: 0.9rem;
+    }
+    nav ul a:hover {
+      background: none;
+      text-decoration: underline;
+    }
+    .hero-img {
+      left: unset;
+      top: unset;
+      top: -15%;
+      right: 0;
+      width: 50%;
+      height: 20em;
+    }
+    div.hero-img {
+      opacity: 95%;
+    }
+    a.menutext {
+      color: rgb(255, 255, 255);
+      opacity: 100%;
+    }
+    section.hero {
+      color: black;
+      height: auto;
+      width: 40%;
+      margin-bottom: 18em;
+    }
+    section.hero svg.down-arrow {
+      stroke: black;
+      position: unset;
+    }
+    section.hero svg.down-arrow path {
+      fill: black;
+    }
+    .feature {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 3em;
+      margin-bottom: 8em;
+    }
+    .feature img {
+      width: 25em;
+    }
+    .feature .content {
+        justify-content: center;
+        text-align: center;
+      width: 25em;
+    }
+    .feature.flip {
+        
+      grid-template-areas: "left right";
+    }
+    .feature.flip img {
+      grid-area: left;
+    }
+    .feature.flip .content {
+      text-align: center;
+      width: 25em;
+      justify-self: left;
+    }
+  }
+  @media only screen and (min-width: 920px) and (min-width: 1200px) {
+    button.pagebuttons {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        
+
+    }
+
+    
+
+
+    button.pagebuttonsv2 {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        width: 15em;
+
+    }
+
+    button.pagebuttons {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+
+    }
+
+    .more-info {
+        margin-top: 10em;
+    }
+
+    
+    .input-fields {
+        max-width: 20px;
+    }
+
+    .wrapper {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .hero-img {
+      left: unset;
+      top: unset;
+      top: -15%;
+      right: 0;
+      width: 40%;
+      height: 20em;
+      
+    }
+    .feature {
+      gap: 0;
+    }
+    section.hero div.hero-bg {
+      margin: 0;
+      background: rgba(0, 0, 0, 0);
+      
+    }
+    svg.down-arrow {
+      stroke: black;
+      position: unset;
+      margin-top: 2em;
+    }
+    svg.down-arrow path {
+      fill: black;
+    }
+  }
+  @-webkit-keyframes introLoad {
+    from {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+              clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @keyframes introLoad {
+    from {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+              clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+  @-webkit-keyframes moveArrow {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes moveArrow {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @-webkit-keyframes moveDown {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes moveDown {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }/*# sourceMappingURL=main.css.map */
