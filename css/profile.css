@@ -20,6 +20,7 @@ body {
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .card-header{
@@ -407,6 +408,21 @@ input[type=text], input[type=password] {
   }
   @media only screen and (min-width: 920px) {
 
+    body {
+      height: 100vh;
+      background-size: cover;
+      display: block;
+      align-items: center;
+      justify-content: center;
+  }
+  
+
+  .centercard {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+  }
+
     
 
     .logo {
@@ -417,7 +433,7 @@ input[type=text], input[type=password] {
       color: rgb(105, 99, 196);
     }
     .header {
-      color: white;
+      color: rgb(255, 255, 255);
     }
     .menu {
       display: none;
@@ -464,7 +480,7 @@ input[type=text], input[type=password] {
     section.hero {
       color: black;
       height: auto;
-      width: 40%;
+      width: 60%;
       margin-bottom: 18em;
     }
     section.hero svg.down-arrow {
@@ -504,6 +520,15 @@ input[type=text], input[type=password] {
       width: 1200px;
       margin: 0 auto;
     }
+
+    .profile-card{
+      width: 30em;
+      height:fit-content;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+
     .hero-img {
       left: unset;
       top: unset;

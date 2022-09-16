@@ -26,7 +26,7 @@ async function tryLoggingIn() {
  let username = usernameInput.value;
  let password = passwordInput.value;
 
- let response = await fetch("http://localhost:9000/monstermanual/player/"+ username +"/"+password);
+ let response = await fetch("http://20.172.39.34:9000/monstermanual/player/"+ username +"/"+password);
  response = await response.json();
  console.log(response);
 
