@@ -48,7 +48,7 @@ function loadSpan(response){
 }
 
 async function loadAllPlayers(){
-    let response = await fetch("http://localhost:9000/monstermanual/players");
+    let response = await fetch("http://20.172.39.34:9000/monstermanual/players");
     response = await response.json();
     loadSpan(response);
 }
@@ -57,7 +57,7 @@ async function loadAllPlayers(){
 
 function addPlayer() {
     let request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:9000/monstermanual/players");
+    request.open("POST", "http://20.172.39.34:9000/monstermanual/players");
     request.setRequestHeader('Content-type', 'application/json; charset=UTF=8');
     let playerObj = {name:nameInput.value, playerClass:classInput.value, armorClass:acInput.value, password:passInput.value};
     request.send(JSON.stringify(playerObj));
@@ -66,7 +66,7 @@ function addPlayer() {
 function removePlayer() {
     let name = removeInput.value;
     let request = new XMLHttpRequest();
-    request.open("DELETE", "http://localhost:9000/monstermanual/player/"+name);
+    request.open("DELETE", "http://20.172.39.34:9000/monstermanual/player/"+name);
     request.setRequestHeader('Content-type', 'application/json; charset=UTF=8');
     request.send();
     console.log(JSON.stringify(removeInput));
@@ -74,7 +74,7 @@ function removePlayer() {
 
 async function selectPlayer() {
     let name = selectInput.value;
-    let response = await fetch("http://localhost:9000/monstermanual/player/"+name);
+    let response = await fetch("http://20.172.39.34:9000/monstermanual/player/"+name);
     response = await response.json();
     loadPlayer(response);
     

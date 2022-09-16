@@ -44,7 +44,7 @@ function loadSpan(response){
 }
 
 async function loadAllMonsters(){
-    let response = await fetch("http://localhost:9000/monstermanual/monsters");
+    let response = await fetch("http://20.172.39.34:9000/monstermanual/monsters");
     response = await response.json();
     loadSpan(response);
 }
@@ -53,7 +53,7 @@ async function loadAllMonsters(){
 
 function addMonster() {
     let request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:9000/monstermanual/monsters");
+    request.open("POST", "http://20.172.39.34:9000/monstermanual/monsters");
     request.setRequestHeader('Content-type', 'application/json; charset=UTF=8');
     let monsterObj = {name:nameInput.value, type:typeInput.value, size:sizeInput.value, description:descInput.value, armorClass:acInput.value };
     request.send(JSON.stringify(monsterObj));
@@ -62,7 +62,7 @@ function addMonster() {
 function removeMonster() {
     let name = removeInput.value;
     let request = new XMLHttpRequest();
-    request.open("DELETE", "http://localhost:9000/monstermanual/monster/"+name);
+    request.open("DELETE", "http://20.172.39.34:9000/monstermanual/monster/"+name);
     request.setRequestHeader('Content-type', 'application/json; charset=UTF=8');
     request.send();
     console.log(JSON.stringify(removeInput));
@@ -70,7 +70,7 @@ function removeMonster() {
 
 async function selectMonster() {
     let name = selectInput.value;
-    let response = await fetch("http://localhost:9000/monstermanual/monster/"+name);
+    let response = await fetch("http://20.172.39.34:9000/monstermanual/monster/"+name);
     response = await response.json();
     loadMonster(response);
     
