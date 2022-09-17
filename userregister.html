@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/signup.css">
+	<link rel="stylesheet" href="css/style.css">
     <title>Sign Up/Log In</title>
 </head>
 <body>
@@ -31,67 +31,58 @@
                         
 
                     </nav>
+
+                    <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
+                    </svg> 
+
                     </header>
                     
 
-
-
-   
-    <div class="form-structor">
-        <div class="signup">
-            <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
-            <div class="form-holder">
-                <input type="text" class="input" placeholder="Name" />
-                <input type="email" class="input" placeholder="Email" />
-                <input type="password" class="input" placeholder="Password" />
-            </div>
-            <button class="submit-btn">Sign up</button>
-        </div>
-        <div class="login slide-up">
-            <div class="center">
-                <h2 class="form-title" id="login"><span>or</span>Log in</h2>
-                <div class="form-holder">
-                    <input type="email" class="input" placeholder="Email" />
-                    <input type="password" class="input" placeholder="Password" />
-                </div>
-                <!--TRYING TO ADD LOGIN FORM-->
-                <div class="loginsection">
-
-
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; justify-self: center;" class="button-27 pagebuttonsv2" role="button" id= "addPlayer">Log In</button>
-
-
-                    <div id="id01" class="modal">
-  
-                        <form class="modal-content animate" onsubmit = "return false">
-                          
-                      
-                          <div class="container">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" onfocus="this.value=''" id="username"  required>
-                      
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" onfocus="this.value=''"  id="password" required>
-                              
-                            <button type="button" id="loggingin">Login</button>
-                            
-                          </div>
-                      
-                          <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" id = "closewindow" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                            <p>New here? <a href="#" style="color:black">Sign Up</a></p>
-                            <span id="wronglogin"></span>
-                          </div>
-                        </form>
-                      </div>
+    
+                        <section class="ftco-section">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="header">
+                                        <h2 class="heading-section" style="color: black">Log In</h2>
+                                    </div>
+                                </div>
+                                <div class="inputfields">                             
+                                    
+                                    
+                                    <form action="#" class="signin-form">
+                                    
+                                    <div class="form-group">
+                                              <input type="text" id="username" class="form-control" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                    <input  id="password" type="password" class="form-control" placeholder="Password" required>  
+                                        </div>
+                                    </form>                                  
+                                    
+                                    
+                                
+                                    <div class="form-group">
+                                        <button type="button" class="button-27 pagebuttons" role="button"class="button-27 pagebuttons" role="button" id ="loggingin">Sign In</button>
+                                    </div>
+                                </div>
+                                    
+                                    <div class="footer">
+                                        <div class="rememberbox">
+                                            <span id="wronglogin"></span>
+                                        </div>
+                                                    <div class="forgotpass">
+                                                        <a href="#" style="color: rgb(22, 21, 21)">Forgot Password</a>
+                                                    </div>
+                                    </div>
+                                  
+                            </div>
+                        </section>
                     
-                </div>
-                <button class="submit-btn">Log in</button>
-            </div>
-        </div>
-    </div>
+                        
+                      <script src="js/signin.js"></script>
+                    
 
-    <script src="signup.js"></script>
-</body>
+    </body>
 </html>
 	

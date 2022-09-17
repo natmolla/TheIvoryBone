@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/profile.css">
+        
 </head>
 <body>
 
@@ -63,8 +64,12 @@
                     <div class="pic">
                         <img src="images/swordsman.png" alt="">
                     </div>
-                    <div class="name">Abeth</div>
-                    <div class="playerClass">Monk</div>
+                    <div class="name">
+                        <span id="nameField"></span>
+                    </div>
+                    <div class="playerClass">
+                        <span id="classField"></span>
+                    </div>
                     <div class="sm">
                         <ul>
                             <li>01</li>
@@ -77,20 +82,20 @@
                 <div class="card-footer">
                     <div class="numbers">
                         <div class="item">
-                            <span>120</span>
-                            Posts
+                            <span id="armorClassField"> </span>
+                            Armor Class
                     </div>
                     <div class="border"></div>
                     <div class="numbers">
                         <div class="item">
-                            <span>127</span>
-                            Following
+                            <span id="goldField"> </span>
+                            Gold
                     </div>
                     <div class="border"></div>
                     <div class="numbers">
                         <div class="item">
-                            <span>120K</span>
-                            Followers
+                            <span id="killsField"> </span>
+                            Kills
                     </div>
 
                     </div>
@@ -107,7 +112,6 @@
         
 
     </div>
-    
     <script src="js/player.js"></script>
 </body>
 </html>

@@ -20,11 +20,11 @@ body {
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    box-shadow: rgba(170, 170, 170, 0.5) 0px 25px 20px -20px;
 }
 
 .card-header{
-    background: #2c3a47;
+    background-color: #6988a5;
     padding: 60px 40px;
 }
 

@@ -32,11 +32,15 @@ let passInput = document.getElementById('passwordInput');
 let removeInput = document.getElementById('removeInput');
 let selectInput = document.getElementById('selectInput');
 
+let boardContainer = document.getElementById('boardContainer');
+let loadBoardButton = document.getElementById('loadBoardButton');
+
 loadButton.addEventListener("click", loadAllPlayers);
 removeButton.onclick = removePlayer;
 addButton.onclick = addPlayer;
+loadBoardButton.addEventListener('click', getLeaderboard);
 
-selectButton.addEventListener("click", selectPlayer);
+
 
 function loadSpan(response){
     content.innerHTML = "";  //refreshes the container information
@@ -98,4 +102,23 @@ async function loadPlayer(response) {
     playerContent.appendChild(playerClass);
     playerContent.appendChild(playerArmorClass);
 
+}
+
+
+async function getLeaderboard(){
+    let response = await fetch("http://20.172.39.34:9000/monstermanual/leaderboard");
+    response = await response.json();
+    loadLeaderboard(response);
+    console.log(response);
+}
+
+function loadLeaderboard(response){
+    boardContainer.innerHTML = "";  //refreshes the container information
+    for(let i=0; i < response.length; i++){ //goes through the array
+        let boardField = document.createElement("p");
+        boardField.innerHTML = response[i].name + ": " + response[i].killScore + " kills.";
+        
+        boardContainer.appendChild(boardField);
+        
+    }
 }

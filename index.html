@@ -62,37 +62,7 @@
 
 
 
-                    <div class="loginsection">
 
-
-                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; justify-self: center;" class="button-27 pagebuttonsv2" role="button" id= "addPlayer">Log In</button>
-    
-    
-                        <div id="id01" class="modal">
-      
-                            <form class="modal-content animate" onsubmit = "return false">
-                              
-                          
-                              <div class="container">
-                                <label for="uname"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" onfocus="this.value=''" id="username"  required>
-                          
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" onfocus="this.value=''"  id="password" required>
-                                  
-                                <button type="button" id="loggingin">Login</button>
-                                
-                              </div>
-                          
-                              <div class="container" style="background-color:#f1f1f1">
-                                <button type="button" id = "closewindow" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                                <p>New here? <a href="#" style="color:black">Sign Up</a></p>
-                                <span id="wronglogin"></span>
-                              </div>
-                            </form>
-                          </div>
-                        
-                    </div>
 
 
 
@@ -139,6 +109,8 @@
                     }
                 }
                 </script>
+            <script type="module" src="/path/to/js.cookie.mjs"></script>
+            <script nomodule defer src="/path/to/js.cookie.js"></script>
             <script src="js/main.js"></script>
         </body>
     </html>
