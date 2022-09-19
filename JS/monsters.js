@@ -26,9 +26,20 @@ let typeInput = document.getElementById('typeInput');
 let acInput = document.getElementById('acInput');
 let sizeInput = document.getElementById('sizeInput');
 let descInput = document.getElementById('descInput');
+
+let nameInputUpdate = document.getElementById('nameInputUpdate');
+let typeInputUpdate = document.getElementById('typeInputUpdate');
+let acInputUpdate = document.getElementById('acInputUpdate');
+let sizeInputUpdate = document.getElementById('sizeInputUpdate');
+let descInputUpdate = document.getElementById('descInputUpdate');
+
+let updateButton = document.getElementById('updateButton');
+
 let removeInput = document.getElementById('removeInput');
 let selectInput = document.getElementById('selectInput');
 
+
+let updateInputContent = document.getElementById('updateInput');
 
 
 //LOGIN STUFF MENU OPTIONS
@@ -44,7 +55,10 @@ let cookieName = getCookie('playerName');
 let cookieDomain = getCookie('')
 
 logoutInput.addEventListener('click', logout);
-loadButton.addEventListener("click", loadAllMonsters);
+loadButton.addEventListener('click', loadAllMonsters);
+removeButton.addEventListener('click', removeMonster);
+selectButton.addEventListener('click', selectMonster);
+addButton.addEventListener('click', addMonster);
 
 checkLogin();
 
@@ -140,6 +154,27 @@ async function loadMonster(response) {
     monsterContent.appendChild(monsterDescription);
     monsterContent.appendChild(monsterArmorClass);
 }
+
+/* let requestUpdate = {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    let monsterObj = {name:nameInputUpdate.value, type:typeInputUpdate.value, size:sizeInputUpdate.value, description:descInputUpdate.value, armorClass:acInputUpdate.value };
+    body: JSON.stringify(monsterObj)
+    
+};
+
+fetch('https://reqres.in/api/articles/1', requestOptions)
+    .then(response => response.json())
+    .then(data => element.innerHTML = data.updatedAt );
+    */
+
+    function updateMonster() {
+        let request = new XMLHttpRequest();
+        request.open("POST", "http://20.172.39.34:9000/monstermanual/monsters");
+        request.setRequestHeader('Content-type', 'application/json; charset=UTF=8');
+        let monsterObj = {name:nameInput.value, type:typeInput.value, size:sizeInput.value, description:descInput.value, armorClass:acInput.value };
+        request.send(JSON.stringify(monsterObj));
+    }
 
 //COOKIE HELPER
 
