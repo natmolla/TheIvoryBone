@@ -44,6 +44,7 @@ let cookieName = getCookie('playerName');
 let cookieDomain = getCookie('')
 
 logoutInput.addEventListener('click', logout);
+loadButton.addEventListener("click", loadAllMonsters);
 
 checkLogin();
 
