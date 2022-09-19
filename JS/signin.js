@@ -12,6 +12,20 @@ close.addEventListener('click', () => {
     nav.classList.remove('open-nav')
 })
 
+//LOGIN STUFF MENU OPTIONS
+
+//LOGIN STUFF MENU OPTIONS
+
+let logoutInput = document.getElementById('logout');
+let viewLogin = document.getElementById('login');
+let viewProfile = document.getElementById('profile');
+let loginStatus = getCookie('playerName');
+
+let logoutElement = document.getElementById('logout');
+console.log(loginStatus);
+let cookieName = getCookie('playerName');
+let cookieDomain = getCookie('')
+
 
 let loginbutton = document.getElementById('loggingin');
 let usernameInput = document.getElementById('username');

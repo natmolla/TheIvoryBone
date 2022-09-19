@@ -158,7 +158,6 @@ nav .close {
   z-index: 999;
 }
 
-
 .hideOption {
   display: none;
 }
@@ -241,6 +240,24 @@ section.hero .down-arrow path {
   }
 }
 @media only screen and (min-width: 920px) {
+
+  body {
+    height: 100vh;
+    background-size: cover;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.centercard {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+
   .logo {
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -249,7 +266,7 @@ section.hero .down-arrow path {
     color: rgb(105, 99, 196);
   }
   .header {
-    color: white;
+    color: rgb(255, 255, 255);
   }
   .menu {
     display: none;
@@ -272,7 +289,7 @@ section.hero .down-arrow path {
   nav ul a {
     color: rgb(255, 255, 255);
     padding: 0.5em 1.5em;
-    font-size: 1000.9rem;
+    font-size: 0.9rem;
   }
   nav ul a:hover {
     background: none;
@@ -296,7 +313,7 @@ section.hero .down-arrow path {
   section.hero {
     color: black;
     height: auto;
-    width: 40%;
+    width: 60%;
     margin-bottom: 18em;
   }
   section.hero svg.down-arrow {
@@ -336,6 +353,15 @@ section.hero .down-arrow path {
     width: 1200px;
     margin: 0 auto;
   }
+
+  .profile-card{
+    width: 30em;
+    height:fit-content;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  }
+
   .hero-img {
     left: unset;
     top: unset;
@@ -413,3 +439,4 @@ section.hero .down-arrow path {
     transform: translateY(0);
     opacity: 1;
   }
+}/*# sourceMappingURL=main.css.map */
