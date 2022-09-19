@@ -164,6 +164,10 @@ function loadLeaderboard(response){
     }
 }
 
+async function updatePlayer(name){
+    
+}
+
 //COOKIE HELPER
 
 function getCookie(name) {
