@@ -82,7 +82,7 @@ function loadSpan(response){
 }
 
 async function loadAllMonsters(){
-    let response = await fetch("http://20.172.39.34:9000/monstermanual/monsters");
+    let response = await fetch("https://20.172.39.34:9000/monstermanual/monsters");
     response = await response.json();
     loadSpan(response);
 }
