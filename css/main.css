@@ -2,6 +2,13 @@ html {
   background-color: linear-gradient(to bottom, rgba(53, 53, 53, 0.55), rgba(7, 5, 32, 0.33)), url("../images/bg");
 }
 
+
+.hideOption {
+  display: none;
+}
+
+
+
 body {
   margin: 1.5em;
   font-family: "Poppins", sans-serif;

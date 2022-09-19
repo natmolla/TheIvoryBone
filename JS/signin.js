@@ -23,6 +23,34 @@ loginbutton.addEventListener("click", tryLoggingIn);
 loginbutton.addEventListener("click", clearFields);
 
 
+logoutInput.addEventListener('click', logout);
+
+checkLogin();
+checkLogout();
+
+
+
+//CHECK IF LOGGED IN
+
+function checkLogin() {
+    if (loginStatus !== undefined ){
+        viewLogin.classList.add('hideOption');
+        
+    } else if (loginStatus === undefined ) {
+        viewProfile.classList.add('hideOption');
+        logoutElement.classList.add('hideOption');
+    }
+}
+
+//LOG OUT
+
+function logout(){
+    result = eraseCookie( 'playerName' );
+    console.log(result);
+    checkLogin();
+}
+
+
 async function tryLoggingIn() {
  let username = usernameInput.value;
  let password = passwordInput.value;
@@ -46,4 +74,17 @@ async function tryLoggingIn() {
 
 function clearFields() {
     wrongloginbox.innerHTML = "";
+}
+
+//COOKIE HELPER
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+
+function eraseCookie(name) {   
+    document.cookie = name+'=; Max-Age=-99999999;';  
 }

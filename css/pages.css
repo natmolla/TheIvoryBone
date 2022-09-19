@@ -146,6 +146,12 @@ input#selectInput {
     width: 2.5em;
     z-index: 999;
   }
+
+  
+.hideOption {
+  display: none;
+}
+
   
   header {
     display: flex;
